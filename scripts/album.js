@@ -97,9 +97,7 @@ var findParentByClassName = function(element, targetClass) {
     } else if (element.parentElement === false) {
     	alert("No parent found.");
 
-    } else {
-        
-    }
+    } 
 };
 
 var getSongItem = function(element) {
