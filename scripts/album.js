@@ -141,13 +141,9 @@ window.onload = function() {
     setCurrentAlbum(albumPicasso);
     
     songListContainer.addEventListener('mouseover', function(event) {
-        var buttonIcon = event.target.parentElement.querySelector('.song-item-number').innerHTML;
         if (event.target.parentElement.className === 'album-view-song-item') {
-            if (buttonIcon !== pauseButtonTemplate) {
-            }
-             // Change the content from the number to the play button's HTML
-            buttonIcon = playButtonTemplate;
-            var songItem = getSongItem(event.target);
+
+           var songItem = getSongItem(event.target);
 
             if (songItem.getAttribute('data-song-number') !== currentlyPlayingSong) {
                 songItem.innerHTML = playButtonTemplate;
