@@ -55,20 +55,21 @@ var createSongRow = function(songNumber, songName, songLength) {
     return $(template);
 };
 
-// these are the elements that we want to populate with text dynamically
+var setCurrentAlbum = function(album) {
+    
+    // these are the elements that we want to populate with text dynamically
      var $albumTitle = $('.album-view-title');
      var $albumArtist = $('.album-view-artist');
      var $albumReleaseInfo = $('.album-view-release-info');
      var $albumImage = $('.album-cover-art');
      var $albumSongList = $('.album-view-song-list');
-
-var setCurrentAlbum = function(album) {
      
      // assign values to each part of the album (text, images)
      $albumTitle.text(album.title);
      $albumArtist.text(album.artist);
      $albumReleaseInfo.text(album.year + ' ' + album.label);
      $albumImage.attr('src', album.albumArtUrl);
+    
      // clear contents of album song list container
      $albumSongList.empty();
  
